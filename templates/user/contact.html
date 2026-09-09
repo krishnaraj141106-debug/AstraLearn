@@ -1,0 +1,85 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block xyz %}
+<!----contact Start-->
+<div class="row py-5 services">
+  <div class="col-sm-10 mx-auto">
+    <div class="row">
+      <div class="col-sm-5">
+        <!---Start Card-->
+        <div class="row">
+          <div class="card mb-3">
+            <div class="row g-0 p-3">
+              <div class="col-md-2">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <div class="card-title"><b>Call Us</b> <br> +91-8115597325</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End card-->
+
+        <!---Start Card-->
+        <div class="row">
+          <div class="card mb-3">
+            <div class="row g-0 p-3">
+              <div class="col-md-2">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <div class="card-title"><b>Mail Us</b> <br>krishnaraj141106@gmail.com</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End card-->
+
+        <!---Start Card-->
+        <div class="row">
+          <div class="card mb-3">
+            <div class="row g-0 p-3">
+              <div class="col-md-2">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div class="col-md-10">
+                <div class="card-body">
+                  <div class="card-title"><b>Address</b> <br>Plot no 42 Vikas Nagar Lucknow
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--End card-->
+      </div>
+      <div class="col-sm-7">
+        <b class="badge bg-success text-light text-center">{{msg}}</b>
+        <form method="post">
+          {% csrf_token %}
+          <input type="text" required placeholder="Name" class="form-control" name="name" />
+          <input type="number" required placeholder="Mobile" class="form-control" name="mobile" />
+          <input type="email" required placeholder="E-mail" class="form-control" name="email" />
+          <textarea class="form-control txta" required placeholder="Message" name="message"></textarea>
+          <input type="submit" value="Save" class="btn1" />
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 p-0">
+        <iframe class="w-100"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7111.915647908621!2d80.87181514422517!3d26.968234906456193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3999540b2ef3a3d5%3A0x7ab5e65531d2db04!2sSairpur%2C%20Uttar%20Pradesh%20226201!5e0!3m2!1sen!2sin!4v1784641196815!5m2!1sen!2sin"
+          height="300" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!----contact End-->
+{% endblock %}

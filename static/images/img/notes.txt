@@ -1,0 +1,85 @@
+Here are **10 individual image prompts** you can use to generate **one PNG image at a time**. They all match the same 3D cartoon style as your reference image.
+
+---
+
+### 1. Student Coding on Laptop
+
+**Prompt:**
+
+> A high-quality 3D cartoon illustration of a young male student wearing a red hoodie and black glasses, sitting behind a silver laptop with a graduation cap logo, typing code. A small green plant on the left, a black coding mug on the right, clean modern style, soft shadows, transparent background, PNG, centered composition, no text, ultra-detailed.
+
+---
+
+### 2. Reading a Programming Book
+
+**Prompt:**
+
+> A cute 3D cartoon student in a red hoodie and black glasses reading a large blue programming book while smiling. Two colorful books stacked beside him, modern educational illustration, transparent background, PNG, Pixar-style, highly detailed, isolated object.
+
+---
+
+### 3. Thumbs Up with Laptop
+
+**Prompt:**
+
+> A friendly 3D cartoon student wearing a red hoodie and black glasses working on a silver laptop while giving a thumbs-up with one hand. Small plant beside the laptop, transparent background, PNG, soft lighting, modern educational mascot, isolated.
+
+---
+
+### 4. Writing Notes
+
+**Prompt:**
+
+> A 3D cartoon student in a red hoodie writing notes in an open notebook with a pen. A stack of programming books beside him labeled HTML, CSS, JavaScript, and Bootstrap. Transparent PNG, isolated illustration, premium quality, soft shadows.
+
+---
+
+### 5. Coding with Headphones
+
+**Prompt:**
+
+> A modern 3D cartoon programmer wearing headphones, black glasses, and a red hoodie while typing on a silver laptop. Black coding mug beside the laptop, transparent background, isolated PNG, vibrant colors, educational mascot.
+
+---
+
+### 6. New Idea
+
+**Prompt:**
+
+> A smiling 3D cartoon student in a red hoodie sitting behind a laptop, pointing upward with one finger as a glowing light bulb floats above his hand. Transparent background, PNG, isolated, modern educational illustration, ultra-HD.
+
+---
+
+### 7. Sitting on Floor with Laptop
+
+**Prompt:**
+
+> A cute 3D cartoon student wearing a red hoodie sitting cross-legged on the floor using a silver laptop. Small green plant beside him, transparent background, isolated PNG, soft lighting, clean composition.
+
+---
+
+### 8. Thinking While Studying
+
+**Prompt:**
+
+> A thoughtful 3D cartoon student in a red hoodie holding a pen while thinking over an open notebook. Stack of books labeled C#, .NET, and SQL beside him. Transparent background, isolated PNG, premium educational illustration.
+
+---
+
+### 9. Coffee Break
+
+**Prompt:**
+
+> A cheerful 3D cartoon student in a red hoodie using a laptop while holding a red coffee mug. Laptop centered, transparent background, PNG, modern mascot illustration, isolated with soft shadows.
+
+---
+
+### 10. Online Learning
+
+**Prompt:**
+
+> A 3D cartoon student wearing a red hoodie and black glasses attending an online class on a silver laptop. Books stacked beside the laptop, smiling face, transparent background, isolated PNG, Pixar-style, clean educational artwork.
+
+---
+
+These prompts will generate **single transparent PNG images**, perfect for use on your website.

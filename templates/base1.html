@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+    <title>Student</title>
+    <style>
+        .facts i {
+            font-size: 25px !important;
+            height: 70px;
+            width: 70px;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .color1 {
+            background: #fce4e4;
+            color: #d50000;
+        }
+
+        .color2 {
+            background: #dce3ff;
+            color: #1b7dfc;
+        }
+
+        .color3 {
+            background: #e1f1da;
+            color: #3c962b;
+        }
+
+        .color4 {
+            background: #e5dcfb;
+            color: #8e64f2;
+        }
+
+        .bg-color1 {
+            background-color: #d50000;
+        }
+
+        .text-color1 {
+            color: #d50000;
+        }
+
+        .bg-color2 {
+            background: #283593;
+        }
+
+        .text-color2 {
+            color: #283593;
+        }
+
+        .t .fa-brands {
+            color: #ee4f1e;
+            border: 1px solid #ee4f1e;
+            height: 28px;
+            width: 28px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 2px;
+            transition: all .8s;
+        }
+
+        .t .fa-brands:hover {
+            transform: rotate(360deg);
+            background: #ee4f1e;
+            color: white;
+            transition: all .8s;
+        }
+
+        .t .fa-solid {
+            color: #ee4f1e;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .login {
+            min-height: 150px;
+            background: white;
+            margin: 100px auto;
+            border-radius: 15px;
+            padding: 35px;
+        }
+
+        .profilediv {
+            height: 150px;
+            transition: 2s;
+        }
+
+        .profilediv:hover {
+            background: lightgray;
+            border: 1px solid #ee4f1e !important;
+            transition: 1s;
+        }
+
+        .profile a:hover {
+            background: #ee4f1e;
+        }
+
+        .profileimg {
+            bottom: -70px;
+            left: 399px;
+        }
+
+        .link a {
+            text-decoration: none;
+        }
+
+        .videocard a:hover {
+            color: #ee4f1e;
+        }
+
+        .videocard a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .videocard:hover {
+            transform: scale(1.05);
+            background: lightgoldenrodyellow;
+            transition: 1s;
+        }
+
+        .videocard {
+            transition: 1s;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--Top Section-->
+        <div class="row t bg-dark text-light py-2 text-center sticky-top">
+            <div class="col-sm-1 pt-3 fs-4">
+                <a href="#" title="menu" class="text-decoration-none text-color1" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                        class="fa-solid fa-bars"></i></a>
+            </div>
+            {% if request.session.email %}
+            <div class="col-sm-3 fs-2 pt-2"><i class="fa-solid fa-graduation-cap"></i>
+                Astra<b class="text-color1">Learn</b>
+            </div>
+            <div class="col-sm-4 pt-4">
+                <i class="fa-solid fa-user"></i>{{request.session.email}}
+            </div>
+            <div class="col-sm-3 text-center py-2"><i class="fa-solid fa-user"></i><b>
+
+                    {{request.session.uname}}
+                </b>
+                <img src="/{{ request.session.upic }}" height="50px" width="50px" class="rounded-circle border p-1"
+                    alt="" />
+                {% endif %}
+            </div>
+            <div class="col-sm-1 text-end py-2 pt-3 fs-3 pe-5">
+                <a href="/student/logout/" class="text-decoration-none text-light"><i
+                        class="fa-solid fa-power-off"></i></a>
+            </div>
+        </div>
+        <!--Top Section End-->
+        <!--Menu-->
+        <div class="offcanvas offcanvas-start bg-dark text-light" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-color1" id="offcanvasScrollingLabel">Student Zone</h5>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>
+                    {% if request.session.email %}
+                    <img src="/{{ request.session.upic }}" height="100px" width="100px"
+                        class="rounded-circle border p-2" alt="" /><br>
+                    <b class="fs-3">{{request.session.uname}}</b>
+                    {% endif %}
+                </p>
+                <p><i class="fa-solid fa-chart-bar"></i> <a href="/student/index/"
+                        class="text-decoration-none text-light">Dashboard</a></p>
+                <p><i class="fa-solid fa-graduation-cap"></i> <a href="/student/courses/"
+                        class="text-decoration-none text-light">My Courses</a></p>
+                <p><i class="fa-solid fa-book-open-reader"></i> <a href="/student/enotes/"
+                        class="text-decoration-none text-light">E-Notes</a></p>
+                <p><i class="fa-solid fa-book"></i> <a href="/student/task/"
+                        class="text-decoration-none text-light">Assignment</a>
+                </p>
+                <p><i class="fa-brands fa-windows"></i> <a href="/student/softwarekit/"
+                        class="text-decoration-none text-light">Software Kit</a></p>
+                <p><i class="fa-solid fa-video"></i> <a href="/student/liveclass/"
+                        class="text-decoration-none text-light">Live
+                        Class</a></p>
+                <p><i class="fa-solid fa-user"></i> <a href="/student/profile/"
+                        class="text-decoration-none text-light">My
+                        Profile</a>
+                </p>
+                <p><i class="fa-solid fa-power-off"></i> <a href="/student/logout/"
+                        class="text-decoration-none text-light">Log Out</a>
+                </p>
+            </div>
+        </div>
+        <!--Menu End-->
+        {% block xyz %}
+
+        {% endblock %}
+        <!--Footer-->
+        <div class="row bg-dark text-light text-center">
+            <div class="col-sm-6">
+                <b class="text-color1">&copy; To :</b> <a href="https://www.techpile.in" class="text-decoration-none">
+                    Techpile Technology Private Limited</a>
+            </div>
+            <div class="col-sm-6">
+                <b class="text-color1">Designed & Developed By :</b> <a href="/user/profile/"
+                    class="text-decoration-none">Er. MAYANK RAJPOOT</a>
+            </div>
+        </div>
+    </div>
+    <!--Footer End-->
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>

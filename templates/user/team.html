@@ -1,0 +1,36 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block xyz %}
+<!----team Start-->
+<div class="row gallery py-5 bg-light">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-8">
+                <p class="fs-3">Our <b class="text-color1">Team</b></p>
+                <hr class="w-25" />
+            </div>
+        </div>
+        <div class="row">
+            <!--Gbox-->
+            {% for x in tdata %}
+            <div class="col-sm-3 p-3 t">
+                <div class="shadow-lg bg-light text-dark text-center p-2">
+                    <img src="/{{x.picture}}" class="img-thumbnail p-1" />
+                    <b>{{x.name}}</b><br>
+                    {{x.designation}}<br>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+            {% endfor%}
+            <!--Gbox end-->
+        </div>
+
+    </div>
+</div>
+<!----team End-->
+{% endblock %}

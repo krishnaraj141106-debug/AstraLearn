@@ -1,0 +1,123 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block xyz %}
+<!----Slider Start-->
+<div class="row slider py-5">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+        <p>An ISO 9001:2015 Certified Software Company</p>
+        <p class="fs-1">AstraLearn LMS : <b class="text-color1">Empowering the Future of Digital Learning</b></p>
+        <hr />
+        <div class="pe-5"><b>AstraLearn LMS</b> is a powerful and modern learning management platform designed to
+            transform the way students, educators, and organizations learn, teach, and grow. With interactive courses,
+            real-time progress tracking, personalized learning paths, online assessments, and certification support,
+            AstraLearn LMS provides a seamless and engaging educational experience that empowers users to achieve their
+            academic and professional goals anytime, anywhere.
+            <br><br>
+            <a href="/user/registration/" class="btn1 float-start"><i class="fa-solid fa-user"></i> Register Now</a>
+            <a href="/user/upcomingbatch/" class="ms-2 btn2 float-start"><i class="fa-solid fa-book"></i> Explore
+                Upcoming Batches</a>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <img src="{% static 'images/banner.png' %}" class="img-thumbnail p-0" alt="" />
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+<!----Slider End-->
+<!--Facts Start-->
+<div class="row py-4 facts">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <!--Facts Box-->
+            <div class="col-sm-3 p-1">
+                <div class="shadow-lg p-3 rounded rounded-4">
+                    <i class="fa-solid fa-book color1"></i>
+                    <b class="fs-2 pe-2 ps-2">5+</b>My Courses
+                </div>
+            </div>
+            <!--Facts Box End-->
+            <!--Facts Box-->
+            <div class="col-sm-3 p-1">
+                <div class="shadow-lg p-3 rounded rounded-4">
+                    <i class="fa-solid fa-video color2"></i>
+                    <b class="fs-2 pe-2 ps-2">100+</b>Videos
+                </div>
+            </div>
+            <!--Facts Box End-->
+            <!--Facts Box-->
+            <div class="col-sm-3 p-1">
+                <div class="shadow-lg p-3 rounded rounded-4">
+                    <i class="fa-solid fa-book-open-reader color3"></i>
+                    <b class="fs-2 pe-2 ps-2">50+</b>Tasks
+                </div>
+            </div>
+            <!--Facts Box End-->
+            <!--Facts Box-->
+            <div class="col-sm-3 p-1">
+                <div class="shadow-lg p-3 rounded rounded-4">
+                    <i class="fa-solid fa-user color4"></i>
+                    <b class="fs-2 pe-2 ps-2">20+</b>Mentors
+                </div>
+            </div>
+            <!--Facts Box End-->
+        </div>
+    </div>
+</div>
+<!--Facts End-->
+<!--Upcoming Batch Start-->
+<div class="row">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            {% for x in data %}
+            <!--UBatch Box-->
+            <div class="col-sm-6 p-2">
+                <div class="card mb-3 shadow-lg border-0">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="/{{x.batch_picture}}" class="img-fluid rounded-start" alt="..."
+                                style="min-height: 250px;">
+                        </div>
+                        <div class="col-md-8 py-3">
+                            <div class="card-body">
+                                <h5 class="card-title">{{x.title}}</h5>
+                                <p class="card-text">{{x.batchname}}</p>
+                                <p class="card-text"><small class="text-body-secondary"><b>Starting From:
+                                        </b>{{x.starting_date}}</small>
+                                </p>
+                                <a href="/user/details/" class="badge color1 text-decoration-none rounded-1">View
+                                    More</a>
+                                <a href="/user/registration/"
+                                    class="badge color2 text-decoration-none rounded-1">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--UBatch Box End-->
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!--Upcoming Batch End-->
+<!--CTA Start-->
+<div class="row py-5 color1">
+    <div class="col-sm-10 mx-auto">
+        <div class="row">
+            <div class="col-sm-7 pt-4">
+                <a href="/user/registration/" class="btn1 float-start"><i class="fa-solid fa-user"></i> Register Now</a>
+                <a href="/user/upcomingbatch/" class="ms-2 btn2 float-start"><i class="fa-solid fa-book"></i> Explore
+                    Upcoming Batches</a>
+                <a href="tel:+918115597325" class="ms-2 btn1 float-start"><i class="fa-solid fa-phone"></i> Call Now</a>
+            </div>
+            <div class="col-sm-5 text-dark">
+                <b class="text-danger">Ready to Learn, Grow, and Succeed?</b><br>
+                Empower your future with flexible online learning, personalized dashboards, engaging assessments, and
+                seamless collaboration through AstraLearn LMS.
+            </div>
+        </div>
+    </div>
+</div>
+<!--CTA End-->
+{% endblock %}

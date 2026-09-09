@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block xyz %}
+<div class="row py-2">
+    <div class="col-sm-10 mx-auto">
+        <div class="row py-2 register">
+            <div class="col-sm-5 p-4 shadow-lg rounded-2 bg-light">
+                <p class="h4 text-center">Complete your <b class="text-color1">Registration...</b></p>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="text" required placeholder="Name" class="form-control" name="name" />
+                    <input type="number" required placeholder="Mobile" class="form-control" name="mobile" />
+                    <input type="email" required placeholder="E-mail" class="form-control" name="email" />
+                    <input type="password" required placeholder="Password" class="form-control" name="password" />
+                    <input type="file" required class="form-control" name="fu" placeholder="Profile Picture" />
+                    <textarea class="form-control txta" name="address" placeholder="Address" required></textarea>
+                    <a href="/user/login/" class="float-end text-decoration-none fw-bold">Already
+                        Registered? Login
+                        Now...</a>
+                    <input type="submit" value="Register Now" class="btn1 mt-2" />
+                </form>
+            </div>
+            <div class="col-sm-7">
+                <img src="{% static 'images/5.jpg' %}" alt="" class="img-thumbnail" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

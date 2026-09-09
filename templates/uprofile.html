@@ -1,0 +1,64 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block xyz %}
+<div class="row py-2">
+    <div class="col-sm-8 mx-auto profile">
+        <p class="fs-3 text-center">My <b class="text-color1">Profile</b></p>
+        <hr class="w-25 mx-auto" />
+        <div class="row p-0 shadow-lg rounded-3">
+            <div class="col-sm-12">
+                <div class="position-relative">
+                    <img src="{% static 'images/bg-3.jpg' %}" class="img-fluid" />
+                    <img src="{% static 'images/team/1.jpg' %}"
+                        class="img-fluid position-absolute rounded-circle profileimg"
+                        style="height: 200px; width: 200px;" />
+                </div>
+                <div class="p-4 text-center mt-5">
+                    <h5 class="text-center">Mayank Rajpoot</h5>
+                    <i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh
+                    <br>
+                    <a class="btn bg-color1 text-light">Edit Profile <i class="fa-solid fa-pencil"></i></a>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3 text-center p-4">
+                        <div class="p-4 shadow-lg border border-1 border-secondary rounded-3 profilediv">
+                            <i class="fa-solid fa-envelope fs-3 rounded-circle bg-color1 p-2 text-light"></i><br><br>
+                            krishnaraj141106
+                            @gmail.com
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-center p-4">
+                        <div class="p-4 shadow-lg border border-1 border-secondary rounded-3 profilediv">
+                            <i class="fa-solid fa-phone fs-3 rounded-circle bg-color1 p-2 text-light"></i><br><br>
+                            +91-8115597325
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-center p-4">
+                        <div class="p-4 shadow-lg border border-1 border-secondary rounded-3 profilediv">
+                            <i class="fa-solid fa-calendar fs-3 rounded-circle bg-color1 p-2 text-light"></i><br><br>
+                            14-11-2006
+                        </div>
+                    </div>
+                    <div class="col-sm-3 text-center p-4">
+                        <div class="p-4 shadow-lg border border-1 border-secondary rounded-3 profilediv">
+                            <i
+                                class="fa-solid fa-location-dot fs-3 rounded-circle bg-color1 p-2 text-light"></i><br><br>
+                            Lucknow, Uttar Pradesh
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 p-3">
+                        <div class="p-3 bg-color1 rounded-3 text-light">
+                            <h6>About Me</h6>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit ut architecto accusamus
+                            asperiores reprehenderit in ipsum porro, placeat tempore excepturi voluptate aut? Numquam,
+                            atque earum vel magnam modi harum voluptate?
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

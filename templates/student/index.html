@@ -1,0 +1,160 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block xyz %}
+{% if not request.session.email %}
+<script>
+    alert("You have to Login First");
+    location.href = "/user/login/"
+</script>
+{% endif %}
+<div class="row py-5">
+    <div class="col-sm-12 mx-auto">
+        <div class="row">
+            <div class="col-sm-3 my-3">
+                <!--LiveClass Start-->
+                <div class="row">
+                    {% for x in lives %}
+                    <!--Class Card Start-->
+                    <div class="col-sm-12">
+                        <div class="shadow-lg mx-auto p-4">
+                            <b>Class Details</b>
+                            <div class="row py-1">
+                                <div class="col-5">
+                                    <img src="/{{x.picture}}" height="50" width="100" />
+                                </div>
+                                <div class="col-7">
+                                    <b>{{x.batch}}</b><br>
+                                    <span class="badge color1 p-2">Live Class</span>
+                                </div>
+                            </div>
+                            <hr />
+                            <div>
+                                <i class="fa-solid fa-calendar color1"></i> Date
+                                <span class="float-end">{{x.date}}</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-clock color1"></i> Time
+                                <span class="float-end">{{x.time}}</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-clock color1"></i> Class Type
+                                <span class="float-end">Live Intractive</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-book color1"></i> Batch
+                                <span class="float-end">{{x.batch}}</span>
+                            </div>
+                            <div class="row py-1 px-2">
+                                <div class="col-sm-12 bg-primary-subtle rounded-2 text-center p-1"
+                                    style="font-size: 13px;">
+                                    <i class="fa-solid fa-info"></i>
+                                    Please Join a few minutes before the class.
+                                </div>
+                            </div>
+                            <b>Class Info</b><br>
+                            <span style="font-size: 13px;">{{x.description}}</span><br>
+                            <a target="_blank" class="btn badge bg-danger text-light" href="{{x.joining_link}}">Join
+                                Now <i class="fa-solid fa-video"></i></a>
+                        </div>
+                    </div>
+                    <!--Class Card End-->
+                    {% endfor %}
+                </div>
+                <!--LiveClass End-->
+            </div>
+            <div class="col-sm-9">
+                <!--Facts Start-->
+                <div class="row pt-4 facts text-center">
+                    <p class="h3 text-center">My <b class="text-color1">Dashboard</b></p>
+                    <hr class="w-25 mx-auto" />
+                    <div class="col-sm-12 link">
+                        <div class="row">
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1 pb-3">
+                                <a href="/student/courses/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-book color1"></i><br>
+                                        <b class="">My Courses</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/liveclass/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-video color2"></i><br>
+                                        <b class="">Join Live Class</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/task/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-book-open-reader color3"></i><br>
+                                        <b class="">Assignment</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/profile/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-user color4"></i><br>
+                                        <b class="">My Profile</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/softwarekit/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-brands fa-windows color4"></i><br>
+                                        <b class="">Software Kit</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/enotes/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-book-open-reader color3"></i><br>
+                                        <b class="">E-Books</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/lectures/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-video color2"></i><br>
+                                        <b class="">Lectures</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                            <!--Facts Box-->
+                            <div class="col-sm-3 p-1">
+                                <a href="/student/logout/">
+                                    <div class="shadow-lg p-3 rounded rounded-4">
+                                        <i class="fa-solid fa-power-off color1"></i><br>
+                                        <b class="">Log Out</b>
+                                    </div>
+                                </a>
+                            </div>
+                            <!--Facts Box End-->
+                        </div>
+                    </div>
+                </div>
+                <!--Facts End-->
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

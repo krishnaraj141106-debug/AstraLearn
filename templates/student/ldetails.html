@@ -1,0 +1,65 @@
+{% extends 'base1.html' %}
+{% load static %}
+{% block xyz %}
+{% if not request.session.email %}
+<script>
+    alert("You have to Login First");
+    location.href = "/user/login/"
+</script>
+{% endif %}
+<div class="row py-3">
+    <div class="col-sm-10 mx-auto">
+        <p class="h3 text-center">Course <b class="text-color1">Details <i class="fa-solid fa-book-open"></i></b>
+        </p>
+        <hr class="w-25 mx-auto" />
+        <div class="row py-2">
+            <div class="col-sm-4">
+                <img src="/{{cpic}}" class="w-100" />
+            </div>
+            <div class="col-sm-8">
+                <h5><b>Class Lessons:</b></h5>
+                <hr class="w-25" />
+                <table class="table">
+                    <tr>
+                        <th>Lesson Title</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                    {% for x in videos %}
+                    <tr>
+                        <td><b>{{x.video_title}}</b><br>
+                            {{x.video_description}}</td>
+                        <td class="text-muted" style="font-size: 13px;">{{x.added_date}}</td>
+                        <td><a class="btn p-1" data-bs-toggle="modal" data-bs-target="#box{{x.id}}"><i
+                                    class="fa-solid fa-play color1"
+                                    style="height: 40px; width: 40px; text-align: center; line-height: 40px; border-radius: 50%;"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <!-- Modal -->
+                    <div class="modal fade" id="box{{x.id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">{{x.video_title}}</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe class="w-100" height="315" src="{{x.video_link}}"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Modal End-->
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

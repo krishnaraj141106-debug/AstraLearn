@@ -1,0 +1,383 @@
+<html>
+
+<head>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+    <style>
+        .facts i {
+            font-size: 25px !important;
+            height: 70px;
+            width: 70px;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .color1 {
+            background: #fce4e4;
+            color: #d50000;
+        }
+
+        .color2 {
+            background: #dce3ff;
+            color: #1b7dfc;
+        }
+
+        .color3 {
+            background: #e1f1da;
+            color: #3c962b;
+        }
+
+        .color4 {
+            background: #e5dcfb;
+            color: #8e64f2;
+        }
+
+        .bg-color1 {
+            background-color: #d50000;
+        }
+
+        .text-color1 {
+            color: #d50000;
+        }
+
+        .bg-color2 {
+            background: #283593;
+        }
+
+        .text-color2 {
+            color: #283593;
+        }
+
+        .t .fa-brands {
+            color: #d50000;
+            border: 1px solid #d50000;
+            height: 28px;
+            width: 28px;
+            text-align: center;
+            line-height: 28px;
+            border-radius: 2px;
+            transition: all .8s;
+        }
+
+        .t .fa-brands:hover {
+            transform: rotate(360deg);
+            background: #d50000;
+            color: white;
+            transition: all .8s;
+        }
+
+        .t .fa-solid {
+            color: #d50000;
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .slider {
+            background: url("{%static 'images/banner/bg-scaled.jpg'%}");
+            background-size: cover;
+        }
+
+        .btn1 {
+            height: 45px;
+            width: 130px;
+            text-align: center;
+            border: 3px solid #d50000;
+            color: white;
+            display: block;
+            line-height: 39px;
+            text-decoration: none;
+            border-radius: 3px;
+            background: #d50000;
+        }
+
+        .btn2 {
+            height: 45px;
+            width: 230px;
+            text-align: center;
+            border: 2px solid #d50000;
+            color: #d50000;
+            display: block;
+            line-height: 39px;
+            text-decoration: none;
+            border-radius: 3px;
+        }
+
+        .services .fa-solid {
+            height: 50px;
+            width: 50px;
+            color: #d50000;
+            text-align: center;
+            line-height: 50px;
+            background: #ffede7;
+            border-radius: 3px;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .form-control {
+            height: 45px;
+            margin-bottom: 3%;
+            background: rgba(0, 0, 0, .05) !important;
+        }
+
+        .txta {
+            height: 130px;
+            resize: none;
+        }
+
+        .footer1 {
+            background-color: #343a40;
+            color: #fff;
+            padding: 40px 0;
+        }
+
+        .footer1 h5 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .footer1 a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+
+        .footer1 a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .footer1 .contact-info p {
+            margin: 0;
+        }
+
+        .profilediv {
+            height: 150px;
+            transition: 2s;
+        }
+
+        .profilediv:hover {
+            background: lightgray;
+            border: 1px solid #d50000 !important;
+            transition: 1s;
+        }
+
+        .profile a:hover {
+            background: #d50000;
+        }
+
+        .profileimg {
+            bottom: -70px;
+            left: 399px;
+        }
+
+        .register a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .register a:hover {
+            color: #d50000;
+        }
+
+        .login {
+            min-height: 150px;
+            background: white;
+            margin: 100px auto;
+            border-radius: 15px;
+            padding: 35px;
+        }
+
+        .dashcard {
+            transition: 2s;
+            background: #CE93D8;
+        }
+
+        .dashcard i {
+            background: #9C27B0 !important;
+            color: silver;
+            height: 50px;
+            width: 50px;
+        }
+
+        .dashcard i:hover {
+            background: #E1BEE7 !important;
+            color: gray;
+        }
+
+        .dashcard:hover {
+            transition: 2s;
+            background: #7B1FA2;
+            transform: scale(1.05);
+        }
+
+        .dashcard p {
+            color: whitesmoke;
+        }
+
+        .dashcard p:hover {
+            color: ghostwhite;
+        }
+
+        .link a {
+            text-decoration: none;
+        }
+
+        .ficon {
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            background: #d50000;
+            border-radius: 100%;
+            font-size: 35px;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        #menu {
+            background: transparent !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row t py-3 shadow-lg sticky-top">
+            <div class="col-sm-12">
+                <div class="row t">
+                    <div class="col-sm-2 fs-3 pt-1 ps-4"><i class="fa-solid fa-graduation-cap"></i>
+                        Astra<b class="text-color1">Learn</b>
+                    </div>
+                    <div class="col-sm-8">
+                        <!---start menu------>
+                        <nav class="navbar navbar-expand-lg bg-body-tertiary" id="menu">
+                            <div class="container-fluid">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                    <ul class="navbar-nav mx-auto">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="/user/index/">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/about/">About Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/upcomingbatch/">Upcoming Batch</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/gallery/">Gallery</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/contact/">Contact Us</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/team/">Team</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/registration/">Register</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/login/">Login</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!---end menu------>
+                    </div>
+                    <div class="col-sm-2 text-end py-2 pt-3 pe-4">
+                        <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/mayank-rajpoot-472862391/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/mayankrajpoot7068/"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="www.x.com"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% block xyz %}
+
+        {% endblock %}
+        <!----footer 1 Start-->
+        <div class="row text-light bg-dark footer1">
+            <!-- Contact Column -->
+            <div class="col-sm-3 p-4 contact-info border-end">
+                <h5>Contact Smart <b class="text-color1">Coders</b></h5>
+                <p><strong>Phone:</strong> +91 8115597325</p>
+                <p><strong>Email:</strong> krishnaraj141106@gmail.com</p>
+                <p><strong>Location:</strong> Plot No-43, Behind H.P Petrol Pump,<br>
+                    Tedhi Pulia Ring Rd, Sector 5,<br>
+                    Vikas Nagar, Lucknow, Uttar Pradesh 226022</p>
+            </div>
+            <!-- Contact Column End-->
+            <!-- Quick Links Column -->
+            <div class="col-sm-3 p-4 border-end">
+                <h5>Quick <b class="text-color1">Links</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="/user/index/">Home</a></li>
+                    <li><a href="/user/about/">About Us</a></li>
+                    <li><a href="/user/registration/">Register</a></li>
+                    <li><a href="/user/upcomingbatch/">Upcoming Batch</a></li>
+                    <li><a href="/user/contact/">Contact Us</a></li>
+                    <li><a href="/user/gallery/">Gallery</a></li>
+                    <li><a href="/user/team/">Team Details</a></li>
+                </ul>
+            </div>
+            <!-- Quick Links Column End-->
+            <!-- Policies Column -->
+            <div class="col-sm-3 p-4 border-end">
+                <h5>Policies & <b class="text-color1">Feedback</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Plan And Pricing</a></li>
+                    <li><a href="#">Research Technologies</a></li>
+                    <li><a href="#">Refund Policy</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <!-- Policies Column End-->
+            <!-- Training Programs Column -->
+            <div class="col-sm-3 p-4 border-end">
+                <h5>Popular <b class="text-color1">Services</b></h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Database Design</a></li>
+                    <li><a href="#">Portfolio & Resume Builder</a></li>
+                    <li><a href="#">Backend Support</a></li>
+                </ul>
+            </div>
+            <!-- Training Programs Column End-->
+        </div>
+        <!----footer 1 End-->
+
+        <!----footer 2 Start-->
+        <div class="row bg-dark mt-1 text-light text-center py-3">
+            <div class="col-sm-6">
+                <b class="text-color1">Copywrite to &copy; :</b> <a href="https://www.techpile.in"
+                    class="text-decoration-none"> Techpile Technology Private Limited</a>
+            </div>
+            <div class="col-sm-6">
+                <b class="text-color1">Designed & Developed By :</b> <a href="/user/profile/"
+                    class="text-decoration-none">Er. MAYANK RAJPOOT</a>
+            </div>
+        </div>
+        <!----footer 2 End-->
+    </div>
+    <script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+</body>
+
+</html>
