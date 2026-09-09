@@ -24,9 +24,13 @@ TEMPLATES_DIR=BASE_DIR/"templates"
 SECRET_KEY = 'django-insecure-i_v)zm(fd94=14@mhp&q_k-4_xw^ec#0v*tn6!pxwk15(6)t5f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'astra-learn-yk28.onrender.com',
+    'localhost',
+    '127.0.0.1'
+]
 
 
 # Application definition
