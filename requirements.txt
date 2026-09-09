@@ -5,6 +5,7 @@ click==8.1.8
 colorama==0.4.6
 Django==6.0.7
 gTTS==2.5.4
+gunicorn==26.2.0
 idna==3.18
 pillow==12.3.0
 qrcode==8.2
